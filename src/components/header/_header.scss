@@ -1,0 +1,12 @@
+@import "../../assets/global-styles.scss";
+.header-wrapper {
+  max-width: 100%;
+  background: $header-color;
+  box-shadow: 2px 4px 4px 1px gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 4rem;
+  font-family: $main-font;
+  color: white;
+}
