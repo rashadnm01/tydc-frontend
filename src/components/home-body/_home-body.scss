@@ -2,4 +2,10 @@
   max-width: 100%;
   padding: 2rem;
   display: flex;
+  justify-content: space-around;
+  .right-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }

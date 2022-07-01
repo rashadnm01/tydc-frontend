@@ -1,17 +1,18 @@
 @import "../../../assets/global-styles.scss";
-.hod-wrapper {
-  height: 70vh;
-  width: 50vw;
+.leave-feedback-wrapper {
+  height: 30vh;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 0.9px solid black;
   color: white;
   border-radius: $main-radius;
-  .hod-header {
-    color: #538ea8;
+  overflow: hiden;
+  .leave-feedback-header {
     border-top-left-radius: $main-radius;
     border-top-right-radius: $main-radius;
+    color: #538ea8;
     width: 100%;
     height: 3rem;
     background: radial-gradient(
@@ -29,9 +30,8 @@
   }
   text-align: center;
   font-family: $main-font;
-  .hod-title {
-  }
-  .hod-body {
+
+  .leave-feedback-body {
     color: white;
     height: 100%;
     width: 100%;
