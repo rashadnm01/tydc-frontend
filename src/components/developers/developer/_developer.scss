@@ -1,10 +1,41 @@
+@import "../../../assets/global-styles.scss";
 .developer-wrapper {
-  width: 25px;
-  height: 70px;
-  margin: 0 1rem;
+  width: 28%;
+  height: 95px;
   border-radius: 8px;
   background-color: #58bfcd;
-
+  border: 1px solid white;
+  margin: 0.5rem 0.3rem;
+  box-shadow: $main-shadow;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.2rem;
+  font-family: $main-font;
+  .profile-pic-wrapper {
+    width: 35%;
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    font-size: 0.5rem;
+    text-overflow: hidden;
+  }
+  .skills-wrapper {
+    width: 63%;
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    .skill-wrapper {
+      width: 80%;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      margin: 0.3rem 0.1rem;
+      color: white;
+      font-size: 0.8rem;
+    }
+  }
 }

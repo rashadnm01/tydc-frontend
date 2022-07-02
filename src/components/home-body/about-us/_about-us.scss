@@ -8,8 +8,8 @@
   border: 0.9px solid black;
   color: white;
   border-radius: $main-radius;
-
-  overflow: hiden;
+  box-shadow: $main-shadow;
+  overflow: hidden;
   .about-us-header {
     border-top-left-radius: $main-radius;
     border-top-right-radius: $main-radius;

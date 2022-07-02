@@ -8,6 +8,8 @@
   border: 0.9px solid black;
   color: white;
   border-radius: $main-radius;
+  box-shadow: $main-shadow;
+  overflow: hidden;
   .hod-header {
     color: #538ea8;
     border-top-left-radius: $main-radius;

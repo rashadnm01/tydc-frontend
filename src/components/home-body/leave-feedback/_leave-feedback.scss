@@ -32,6 +32,7 @@
   font-family: $main-font;
 
   .leave-feedback-body {
+    box-shadow: $main-shadow;
     color: white;
     height: 100%;
     width: 100%;
@@ -56,6 +57,7 @@
       .input-wrapper {
         display: flex;
         align-items: baseline;
+        width: 100%;
         .label {
           margin-right: 0.2rem;
           text-align: left;
