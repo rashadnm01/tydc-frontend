@@ -2,7 +2,7 @@
 
 .hod-wrapper {
   height: 60vh;
-  width: 50vw;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
   border-radius: $main-radius;
   box-shadow: $main-shadow;
   overflow: hidden;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 800px) {
     margin-top: 1rem;
     width: 90vw;
   }

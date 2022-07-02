@@ -21,7 +21,7 @@
     font-weight: 600;
     border: 4px solid black;
     color: $main-dark-blue;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 800px) {
       width: 50%;
     }
     .form-title {
