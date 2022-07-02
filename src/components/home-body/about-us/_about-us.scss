@@ -10,6 +10,10 @@
   border-radius: $main-radius;
   box-shadow: $main-shadow;
   overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    margin-top: 2rem;
+    width: 90vw;
+  }
   .about-us-header {
     border-top-left-radius: $main-radius;
     border-top-right-radius: $main-radius;
