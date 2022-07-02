@@ -4,12 +4,11 @@ import "./_developers.scss";
 
 export const Developers = (props) => {
   const [developers, setDevelopers] = useState(null);
-  console.log(DUMMY_DEVELOPERS);
   useEffect(() => {
     setDevelopers(
       DUMMY_DEVELOPERS.map((developer) => <Developer dev={developer} />)
     );
-  }, []);
+  }, [DUMMY_DEVELOPERS]);
   return <div className="developers-wrapper">{developers}</div>;
 };
 
