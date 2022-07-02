@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { Developer } from "./developer";
 import "./_developers.scss";
 
-export const Developers = () => {
+export const Developers = (props) => {
   const [developers, setDevelopers] = useState(null);
+  console.log(DUMMY_DEVELOPERS);
   return (
     <div className="developers-wrapper">
-      {DUMMY_DEVELOPERS.map((developer) => {
-        return <Developer dev={developer} />;
-      })}
+      {DUMMY_DEVELOPERS
+        ? DUMMY_DEVELOPERS.map((developer) => <Developer dev={developer} />)
+        : ""}
     </div>
   );
 };
 
-export const DUMMY_DEVELOPERS = [
+const DUMMY_DEVELOPERS = [
   {
     id: "0",
     firstName: "Rashad",

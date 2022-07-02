@@ -1,6 +1,6 @@
 @import "../../../assets/global-styles.scss";
 .about-us-wrapper {
-  height: 30vh;
+  height: 25vh;
   width: 30vw;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,12 @@
   font-family: $main-font;
 
   .about-us-body {
-    color: white;
+    font-size: 0.4rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
     border-bottom-right-radius: $main-radius;
@@ -45,5 +50,12 @@
         rgba(143, 143, 143, 0) 90.62%,
         rgba(143, 143, 143, 0) 100%
       );
+    span {
+      max-width: 100%;
+      max-height: 100%;
+      text-overflow: clip;
+      padding: 0 0.5rem;
+      font-size: 0.7rem;
+    }
   }
 }

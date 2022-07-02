@@ -44,5 +44,48 @@
         rgba(143, 143, 143, 0) 90.62%,
         rgba(143, 143, 143, 0) 100%
       );
+    form[type="submit"] {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      font-size: 0.6rem;
+      color: black;
+      .input-wrapper {
+        display: flex;
+        align-items: baseline;
+        .label {
+          margin-right: 0.2rem;
+          text-align: left;
+        }
+        input[name="name"] {
+          height: 0.6rem;
+          width: 50%;
+        }
+        input[name="email"] {
+          height: 0.6rem;
+          width: 100%;
+        }
+      }
+      .feedback-input-wrapper {
+        height: 50%;
+        width: 100%;
+        input[name="feedback"] {
+          height: 65%;
+          width: 80%;
+        }
+        input[name="feedback"] {
+        }
+      }
+      input[type="submit"] {
+        height: 1rem;
+        width: 2rem;
+        font-size: 0.5rem;
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 }
