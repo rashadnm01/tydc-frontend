@@ -1,7 +1,7 @@
 @import "../../../assets/global-styles.scss";
 .nav {
   display: flex;
-
+  font-family: $cool-font;
   @media screen and (max-width: 1024px) {
     width: 100%;
     flex-wrap: wrap;
@@ -9,19 +9,20 @@
   }
   .list-item {
     padding: 0 1.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     white-space: nowrap;
     @media screen and (max-width: 1024px) {
       display: flex;
       width: 28%;
       margin: 0.4rem;
-      text-decoration: underline;
       color: rgb(185, 242, 255);
+      font-size: 1rem;
     }
   }
   .list-item:hover {
     font-style: oblique;
     border: 1px solid white;
     background-color: rgba($main-light-blue, 0.5);
+    transform: scale(1.1);
   }
 }

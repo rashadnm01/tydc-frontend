@@ -7,10 +7,7 @@ export const LoginSignupText = () => {
     <div className="login-signup-text">
       Have an account? <br />{" "}
       <u onClick={() => navigate("/login", { replace: true })}>Login</u>, or{" "}
-      <u onClick={() => window.history.replaceState(null, "", "/signup")}>
-        sign up
-      </u>
-      .
+      <u onClick={() => navigate("/signup", { replace: true })}>sign up</u>.
     </div>
   );
 };

@@ -1,7 +1,7 @@
 @import "../../../assets/global-styles.scss";
 .developer-wrapper {
   width: 28%;
-  height: 95px;
+  height: 120px;
   border-radius: 8px;
   background-color: #58bfcd;
   border: 1px solid white;
@@ -47,6 +47,11 @@
       margin: 0.3rem 0.1rem;
       color: white;
       font-size: 0.8rem;
+    }
+
+    .skill-wrapper:hover {
+      background-color: rgba(#58bfcd, 0.5);
+      transform: scale(1.1);
     }
   }
 }

@@ -1,7 +1,9 @@
 import React from "react";
 import { TYDCLogo } from "../../assets/tydc-logo";
+import { useNavigate } from "react-router-dom";
 import "./_login.scss";
 export const Login = (props) => {
+  const navigate = useNavigate();
   return (
     <div className="login-wrapper">
       <form type="submit">
@@ -17,7 +19,13 @@ export const Login = (props) => {
         </div>
         <input type="submit" value="Login" />
         <div className="footer-text">
-          Don't have an account? <u style={{ color: "white" }}>Sign up!</u>
+          Don't have an account?{" "}
+          <u
+            style={{ color: "white" }}
+            onClick={() => navigate("/signup", { replace: true })}
+          >
+            Sign up!
+          </u>
         </div>
       </form>
     </div>

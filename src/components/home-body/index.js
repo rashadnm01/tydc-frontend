@@ -6,7 +6,9 @@ import { LeaveFeedback } from "./leave-feedback";
 export const HomeBody = () => {
   return (
     <div className="home-body-wrapper">
-      <HireOurDevelopers />
+      <div className="developer-carousel">
+        <HireOurDevelopers />
+      </div>
       <div className="right-wrapper">
         <AboutUs />
         <LeaveFeedback />
