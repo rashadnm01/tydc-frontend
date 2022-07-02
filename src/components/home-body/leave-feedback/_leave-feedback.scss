@@ -9,6 +9,10 @@
   color: white;
   border-radius: $main-radius;
   overflow: hiden;
+  @media screen and (max-width: 1024px) {
+    margin-top: 2rem;
+    width: 90vw;
+  }
   .leave-feedback-header {
     border-top-left-radius: $main-radius;
     border-top-right-radius: $main-radius;

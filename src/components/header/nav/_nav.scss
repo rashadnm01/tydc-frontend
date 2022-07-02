@@ -2,10 +2,22 @@
 .nav {
   display: flex;
 
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .list-item {
     padding: 0 1.5rem;
     font-size: 1rem;
     white-space: nowrap;
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      width: 28%;
+      margin: 0.4rem;
+      text-decoration: underline;
+      color: rgb(185, 242, 255);
+    }
   }
   .list-item:hover {
     font-style: oblique;

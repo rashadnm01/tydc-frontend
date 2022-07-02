@@ -9,4 +9,9 @@
   padding: 0.5rem 4rem;
   font-family: $main-font;
   color: white;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    height: 10rem;
+    width: 100%;
+  }
 }
