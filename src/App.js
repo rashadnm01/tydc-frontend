@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap";
 import { TYDCLogo } from "./assets/tydc-logo";
 import TYDCLogoAsSVG from "./assets/tydc-logo-as-svg.svg";
 import { Login } from "./components/login";
+import { Signup } from "./components/signup";
 
 function App() {
   var deviceWidth = window.innerWidth || 1000;
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeBody />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
     </Container>
