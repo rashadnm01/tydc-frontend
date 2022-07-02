@@ -1,4 +1,5 @@
 @import "../../../assets/global-styles.scss";
+
 .hod-wrapper {
   height: 60vh;
   width: 50vw;
@@ -10,6 +11,10 @@
   border-radius: $main-radius;
   box-shadow: $main-shadow;
   overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    margin-top: 1rem;
+    width: 90vw;
+  }
   .hod-header {
     color: #538ea8;
     border-top-left-radius: $main-radius;

@@ -11,12 +11,20 @@
   justify-content: space-between;
   padding: 0.2rem;
   font-family: $main-font;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
   .profile-pic-wrapper {
     width: 35%;
     background-color: #e6e6e6;
     border-radius: 8px;
     font-size: 0.5rem;
     text-overflow: hidden;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      width: 70%;
+    }
   }
   .skills-wrapper {
     width: 63%;
@@ -26,6 +34,9 @@
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: scroll;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
     .skill-wrapper {
       width: 80%;
       height: 30px;
