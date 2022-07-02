@@ -1,3 +1,4 @@
+@import "../../../assets/global-styles.scss";
 .nav {
   display: flex;
 
@@ -5,5 +6,10 @@
     padding: 0 1.5rem;
     font-size: 1rem;
     white-space: nowrap;
+  }
+  .list-item:hover {
+    font-style: oblique;
+    border: 1px solid white;
+    background-color: rgba($main-light-blue, 0.5);
   }
 }

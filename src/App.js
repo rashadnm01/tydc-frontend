@@ -5,6 +5,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { TYDCLogo } from "./assets/tydc-logo";
 import TYDCLogoAsSVG from "./assets/tydc-logo-as-svg.svg";
+import { Login } from "./components/login";
 
 function App() {
   var deviceWidth = window.innerWidth || 1000;
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomeBody />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Container>
