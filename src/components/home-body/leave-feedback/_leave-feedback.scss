@@ -9,6 +9,7 @@
   color: white;
   border-radius: $main-radius;
   overflow: hidden;
+  box-shadow: $main-shadow;
   @media screen and (max-width: 800px) {
     margin-top: 2rem;
     width: 90vw;

@@ -11,6 +11,7 @@
   justify-content: space-between;
   padding: 0.2rem;
   font-family: $main-font;
+  color: black;
   @media screen and (max-width: 800px) {
     flex-direction: column;
     align-items: center;
@@ -18,6 +19,7 @@
   }
   .profile-pic-wrapper {
     width: 35%;
+
     background-color: #e6e6e6;
     border-radius: 8px;
     font-size: 0.5rem;
@@ -25,6 +27,7 @@
     @media screen and (max-width: 800px) {
       flex-direction: column;
       width: 70%;
+      margin: 0.4rem;
     }
   }
   .skills-wrapper {
@@ -35,7 +38,13 @@
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: scroll;
+
     @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+    .skills-title {
+      border-bottom: 1px solid gray;
+      box-shadow: $main-shadow;
       width: 100%;
     }
     .skill-wrapper {
@@ -48,6 +57,7 @@
       margin: 0.3rem 0.1rem;
       color: white;
       font-size: 0.8rem;
+      box-shadow: $main-shadow;
     }
 
     .skill-wrapper:hover {
