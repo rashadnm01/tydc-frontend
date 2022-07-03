@@ -12,6 +12,7 @@ export const Developer = (props) => {
         <div>{dev.lastName}</div>
       </div>
       <div className="skills-wrapper">
+        <div className="skills-title">Skills</div>
         {dev.skills.map((skill) => (
           <Skill skill={skill} />
         ))}
