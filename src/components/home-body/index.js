@@ -15,6 +15,14 @@ export const HomeBody = () => {
       <div className="home-body-title">
         Welcome to The Young Developer Committee!
       </div>
+      <div className="home-body-subtitle">
+        <p>
+          Are you currently searching for software developers to kickstart your
+          startup?
+        </p>
+        <p>Look no more!</p>
+        <p> Search our developer database!</p>
+      </div>
       <div className="home-body-wrapper">
         <div className="developer-carousel">
           <HireOurDevelopers field={select[1]} />
