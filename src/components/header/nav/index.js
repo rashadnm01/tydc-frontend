@@ -11,9 +11,24 @@ export const Nav = () => {
       >
         Home
       </div>
-      <div className="list-item">Hire Our Developers</div>
-      <div className="list-item">About Us</div>
-      <div className="list-item">Leave Us Feedback</div>
+      <div
+        className="list-item"
+        onClick={() => navigate("/hire", { replace: true })}
+      >
+        Hire Our Developers
+      </div>
+      <div
+        className="list-item"
+        onClick={() => navigate("/about", { replace: true })}
+      >
+        About Us
+      </div>
+      <div
+        className="list-item"
+        onClick={() => navigate("/feedback", { replace: true })}
+      >
+        Leave Us Feedback
+      </div>
     </div>
   );
 };
