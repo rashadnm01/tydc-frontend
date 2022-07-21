@@ -1,7 +1,9 @@
 import React from "react";
 import "./_about-us.scss";
-
-export const AboutUs = () => {
+import { useNavigate } from "react-router-dom";
+export const AboutUs = (props) => {
+  const navigate = useNavigate();
+  const fullPage = props.fullPage || false;
   return (
     <div className="about-us-wrapper">
       <div className="about-us-header">About Us</div>
@@ -17,9 +19,11 @@ export const AboutUs = () => {
           offers and positions!
         </span>
         <br />
-        <span style={{ color: "white" }}>
-          <u>Click here to learn more!</u>
-        </span>
+        {!fullPage && (
+          <span onClick={() => navigate("/about")} style={{ color: "white" }}>
+            <u>Click here to learn more!</u>
+          </span>
+        )}
       </div>
     </div>
   );

@@ -7,7 +7,9 @@ import { TYDCLogo } from "./assets/tydc-logo";
 import TYDCLogoAsSVG from "./assets/tydc-logo-as-svg.svg";
 import { Login } from "./components/login";
 import { Signup } from "./components/signup";
-
+import { HirePage } from "./components/hire-page";
+import { AboutPage } from "./components/about-page";
+import { FeedbackPage } from "./components/feedback-page";
 function App() {
   var deviceWidth = window.innerWidth || 1000;
   var deviceHeight = window.innerHeight || 1000;
@@ -19,6 +21,9 @@ function App() {
           <Route path="/" element={<HomeBody />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/hire" element={<HirePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/feedback" element={<FeedbackPage />} />
         </Routes>
       </div>
     </Container>
