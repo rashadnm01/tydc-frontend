@@ -1,9 +1,5 @@
 @import "./assets/global-styles.scss";
 .App {
-  height: 100vh;
-  width: 100vw;
-  max-width: 100vw;
-  max-height: 100vh;
   background: $page-background;
   display: flex;
   flex-direction: column;

@@ -41,7 +41,7 @@ export const HomeBody = () => {
           </div>
         </div>
 
-        <div className="right-wrapper">
+        <div className="right-wrapper" style={{ height: "100%" }}>
           <AboutUs />
           <LeaveFeedback />
         </div>
