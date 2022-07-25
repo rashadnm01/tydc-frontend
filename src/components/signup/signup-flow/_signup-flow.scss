@@ -32,13 +32,11 @@
       font-size: 1.2rem;
       color: white;
     }
-    .input-title {
-    }
     .input-wrapper {
       margin: 0rem;
-    }
-    .agree {
-      display: flex;
+      .label {
+        margin: 0.1rem 0;
+      }
     }
   }
 }
