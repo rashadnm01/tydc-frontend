@@ -3,7 +3,7 @@ import axios from "axios";
 export const login = (e, username, password, setLoggedIn, setFailure) => {
   e.preventDefault();
   const data = { username: username, password: password };
-  fetch("http://" + process.env.REACT_APP_API + "users/login", {
+  fetch(process.env.REACT_APP_API + "users/login", {
     method: "POST", // or 'PUT'
     headers: {
       "Content-Type": "application/json",

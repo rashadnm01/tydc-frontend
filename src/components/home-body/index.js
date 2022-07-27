@@ -30,7 +30,7 @@ export const HomeBody = () => {
             <div className="carousel-select">
               {dummyDevArr.map((dev, i) => (
                 <Bubble
-                  active={select[1] === dev.field}
+                  active={select[i] === dev.field}
                   select={select}
                   setSelect={setSelect}
                   dev={dev.field}

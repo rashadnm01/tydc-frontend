@@ -28,7 +28,7 @@ export const Login = (props) => {
       <form
         type="submit"
         onSubmit={(e) => {
-          login(e, username, password, setLoggedIn);
+          login(e, username, password, setLoggedIn, setFailure);
         }}
       >
         <TYDCLogo size={150} />

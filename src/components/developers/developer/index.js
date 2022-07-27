@@ -5,11 +5,6 @@ import { useRef } from "react";
 export const Developer = (props) => {
   const dev = props.dev;
   const ref = useRef(null);
-  useEffect(() => {
-    console.log(ref?.width?.offsetWidth || 0);
-    console.log(ref);
-  }, []);
-  console.log(dev);
   return (
     <div
       className="developer-wrapper"

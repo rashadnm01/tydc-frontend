@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./_signup.scss";
 import { useNavigate } from "react-router-dom";
 import { TYDCLogo } from "../../assets/tydc-logo";
+import { signup } from "./helpers";
 export const Signup = () => {
   const navigate = useNavigate();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [failure, setFailure] = useState(false);
+  const [signedUp, setSignedUp] = useState(false);
   const [email, setEmail] = useState("");
 
   const onUsernameChange = (e) => {
@@ -20,9 +24,19 @@ export const Signup = () => {
     e.preventDefault();
     setEmail(e.target.value);
   };
+  useEffect(() => {
+    if (signedUp) {
+      navigate("/");
+    }
+  }, [signedUp]);
   return (
     <div className="signup-wrapper">
-      <form type="submit">
+      <form
+        type="submit"
+        onSubmit={(e) =>
+          signup(e, username, password, email, setSignedUp, setFailure)
+        }
+      >
         <TYDCLogo size={150} />
         <div className="form-title">Sign Up</div>
         <div className="input-wrapper">
