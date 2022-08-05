@@ -6,16 +6,7 @@ export const Developer = (props) => {
   const dev = props.dev;
   const ref = useRef(null);
   return (
-    <div
-      className="developer-wrapper"
-      ref={ref}
-      style={{
-        width:
-          ref?.current?.offsetWidth || 0 / window.screen.width > 0.9
-            ? "100%"
-            : "28%",
-      }}
-    >
+    <div className="developer-wrapper" ref={ref}>
       <div className="profile-pic-wrapper">
         <img
           src={DefaultPic}

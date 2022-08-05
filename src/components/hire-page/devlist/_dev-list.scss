@@ -1,0 +1,49 @@
+@import "../../../assets/global-styles.scss";
+
+.dev-list-wrapper {
+  height: 90vh;
+  padding: 0.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.9px solid black;
+  color: white;
+  border-radius: $main-radius;
+  box-shadow: $main-shadow;
+  overflow: hidden;
+  width: 50vw;
+
+  .dev-list-header {
+    color: white;
+    border-top-left-radius: $main-radius;
+    border-top-right-radius: $main-radius;
+    width: 100%;
+    height: 3rem;
+    background: $header-color;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  text-align: center;
+  font-family: $main-font;
+  .dev-list-title {
+  }
+  .dev-list-body {
+    color: white;
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: $main-radius;
+    border-bottom-right-radius: $main-radius;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      radial-gradient(
+        54.45% 77.04% at 60.25% 22.96%,
+        #8f8f8f 0%,
+        rgba(143, 143, 143, 0) 90.62%,
+        rgba(143, 143, 143, 0) 100%
+      );
+    .dev-list-title {
+      padding: 1rem;
+    }
+  }
+}

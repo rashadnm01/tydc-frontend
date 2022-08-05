@@ -10,6 +10,8 @@ export const Signup = () => {
   const [password, setPassword] = useState("");
   const [failure, setFailure] = useState(false);
   const [signedUp, setSignedUp] = useState(false);
+  const [firstName, setFirstName] = useState(false);
+  const [lastName, setLastName] = useState(false);
   const [email, setEmail] = useState("");
 
   const onUsernameChange = (e) => {
@@ -24,9 +26,17 @@ export const Signup = () => {
     e.preventDefault();
     setEmail(e.target.value);
   };
+  const onFirstNameChange = (e) => {
+    e.preventDefault();
+    setFirstName(e.target.value);
+  };
+  const onLastNameChange = (e) => {
+    e.preventDefault();
+    setLastName(e.target.value);
+  };
   useEffect(() => {
     if (signedUp) {
-      navigate("/");
+      navigate("/signup-verification");
     }
   }, [signedUp]);
   return (
@@ -34,7 +44,16 @@ export const Signup = () => {
       <form
         type="submit"
         onSubmit={(e) =>
-          signup(e, username, password, email, setSignedUp, setFailure)
+          signup(
+            e,
+            username,
+            password,
+            email,
+            firstName,
+            lastName,
+            setSignedUp,
+            setFailure
+          )
         }
       >
         <TYDCLogo size={150} />
@@ -60,10 +79,28 @@ export const Signup = () => {
         <div className="input-wrapper">
           <div className="label">Password:</div>
           <input
-            type="text"
+            type="password"
             name="password"
             placeholder="password"
             onChange={onPasswordChange}
+          />
+        </div>
+        <div className="input-wrapper">
+          <div className="label">First Name:</div>
+          <input
+            type="text"
+            name="first_name"
+            placeholder="First Name"
+            onChange={onFirstNameChange}
+          />
+        </div>
+        <div className="input-wrapper">
+          <div className="label">Last Name:</div>
+          <input
+            type="text"
+            name="last_name"
+            placeholder="Last Name"
+            onChange={onLastNameChange}
           />
         </div>
         <div className="agree">

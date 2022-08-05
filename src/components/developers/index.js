@@ -6,9 +6,9 @@ export const Developers = (props) => {
   const [developers, setDevelopers] = useState(null);
   useEffect(() => {
     setDevelopers(
-      DUMMY_DEVELOPERS.map((developer) => <Developer dev={developer} />)
+      props.developers.map((developer) => <Developer dev={developer} />)
     );
-  }, [DUMMY_DEVELOPERS]);
+  }, [props.developers]);
   return <div className="developers-wrapper">{developers}</div>;
 };
 

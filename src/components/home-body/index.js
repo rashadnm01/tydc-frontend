@@ -11,7 +11,7 @@ export const HomeBody = () => {
   ];
   const [select, setSelect] = useState([0, "Front End"]);
   return (
-    <>
+    <div className="my-home-body-wrapper">
       <div className="home-body-title">
         Welcome to The Young Developer Committee!
       </div>
@@ -46,7 +46,7 @@ export const HomeBody = () => {
           <LeaveFeedback />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 const Bubble = (props) => {

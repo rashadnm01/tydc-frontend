@@ -1,43 +1,65 @@
 @import "../../assets/global-styles.scss";
-.home-body-title {
-  box-shadow: $main-shadow;
-  padding: 1rem 1rem;
-  margin: 1rem 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: $main-font;
-  color: white;
-  font-weight: 500;
-  font-size: 1.5rem;
-  text-align: center;
-  align-items: center;
-  background: $banner-header;
-}
-
-.home-body-subtitle {
-  box-shadow: $main-shadow;
-  margin: 0.2rem 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: $main-font;
-  color: white;
-
-  text-align: center;
-  align-items: center;
-  background: $banner-header;
-  p {
-    font-weight: 200;
-    font-size: 1rem;
-    margin: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.my-home-body-wrapper {
+  div {
+    position: relative;
   }
+  .home-body-title {
+    box-shadow: $main-shadow;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $main-font;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+    background: $banner-header;
+  }
+
+  .home-body-subtitle {
+    box-shadow: $main-shadow;
+    margin: 0.2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: $main-font;
+    color: white;
+
+    text-align: center;
+    align-items: center;
+    background: $banner-header;
+    p {
+      font-weight: 200;
+      font-size: 1rem;
+      margin: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
+.my-home-body-wrapper::before {
+  content: "";
+  background-image: url("../../assets/bckgrnd1.jpg");
+  height: 100vh;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
 }
 @media screen and (min-width: 800px) {
   .home-body-wrapper {

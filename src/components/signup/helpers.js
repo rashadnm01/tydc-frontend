@@ -5,11 +5,19 @@ export const signup = (
   username,
   password,
   email,
+  firstName,
+  lastName,
   setSignedUp,
   setFailure
 ) => {
   e.preventDefault();
-  const data = { username: username, password: password, email: email };
+  const data = {
+    username: username,
+    password: password,
+    email: email,
+    firstName: firstName,
+    lastName: lastName,
+  };
   fetch(process.env.REACT_APP_API + "users/signup", {
     method: "POST", // or 'PUT'
     headers: {

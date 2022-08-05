@@ -1,5 +1,5 @@
-@import "../../assets/global-styles.scss";
-.signup-wrapper {
+@import "../../../assets/global-styles.scss";
+.signup-flow-wrapper {
   width: 100%;
   height: 80vh;
   display: flex;
@@ -13,14 +13,14 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    height: 70%;
+    height: 80%;
     width: 50%;
     padding: 1rem 4rem;
     background: $header-color;
     border-radius: 2px;
     font-weight: 600;
     border: 4px solid black;
-    color: $main-dark-blue;
+    color: $login-font-color;
     input[type="submit"] {
       width: 5rem;
       height: 2rem;
@@ -30,12 +30,31 @@
     }
     .form-title {
       font-size: 1.2rem;
-      color: white;
+      color: $main-dark-blue;
     }
+
     .input-wrapper {
       margin: 0rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .label {
-        margin: 0.1rem 0;
+        margin: 0.5rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .switch-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: space-around;
+        justify-content: center;
+        .switch-inner {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
       }
     }
   }

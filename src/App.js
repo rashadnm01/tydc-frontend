@@ -1,4 +1,5 @@
 import "./App.scss";
+import BackgroundImg from "./assets/bckgrnd1.jpg";
 import { Header } from "./components/header";
 import { HomeBody } from "./components/home-body";
 import { Routes, Route, NavLink } from "react-router-dom";

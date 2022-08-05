@@ -1,9 +1,99 @@
+@import "../../assets/global-styles.scss";
 .about-page-wrapper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+  div {
+    position: relative;
+  }
+  .more-info-wrapper {
+    height: 60vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.9px solid black;
+    color: white;
+    border-radius: $main-radius;
+    box-shadow: $main-shadow;
+    overflow: hidden;
+    margin-top: 2rem;
+    @media screen and (max-width: 800px) {
+      width: 90vw;
+      height: 40vh;
+    }
+    .more-info-header {
+      border-top-left-radius: $main-radius;
+      border-top-right-radius: $main-radius;
+      color: white;
+      width: 100%;
+      height: 3rem;
+      background: $header-color;
+      width: 100%;
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    text-align: center;
+    font-family: $main-font;
+
+    .more-info-body {
+      font-size: 1rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      border-bottom-right-radius: $main-radius;
+      border-bottom-left-radius: $main-radius;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        radial-gradient(
+          54.45% 77.04% at 60.25% 22.96%,
+          #8f8f8f 0%,
+          rgba(143, 143, 143, 0) 90.62%,
+          rgba(143, 143, 143, 0) 100%
+        );
+      box-shadow: $main-shadow;
+      span {
+        max-width: 100%;
+        max-height: 100%;
+        text-overflow: clip;
+
+        font-size: 0.9rem;
+        u {
+          color: $main-dark-blue;
+        }
+        u:hover {
+          color: white;
+        }
+      }
+      span:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.about-page-wrapper::before {
+  content: "";
+  background-image: url("../../assets/bckgrnd1.jpg");
+  height: 100vh;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
 }
