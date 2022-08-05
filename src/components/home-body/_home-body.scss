@@ -1,5 +1,12 @@
 @import "../../assets/global-styles.scss";
 .my-home-body-wrapper {
+  max-width: 100vw;
+  width: 100vw;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   div {
     position: relative;
   }
@@ -61,6 +68,7 @@
   bottom: 0;
   opacity: 0.3;
 }
+
 @media screen and (min-width: 800px) {
   .home-body-wrapper {
     max-width: 100%;
