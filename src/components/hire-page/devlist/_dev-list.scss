@@ -12,7 +12,9 @@
   box-shadow: $main-shadow;
   overflow: hidden;
   width: 50vw;
-
+  @media screen and (max-width: 800px) {
+    width: 90vw;
+  }
   .dev-list-header {
     color: white;
     border-top-left-radius: $main-radius;
