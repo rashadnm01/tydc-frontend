@@ -8,7 +8,12 @@ export const SignupFlow = () => {
   const [checked, setChecked] = useState("dev");
   return (
     <div className="signup-flow-wrapper">
-      <form type="submit" onSubmit={() => navigate("/")}>
+      <form
+        type="submit"
+        onSubmit={() => {
+          navigate("/");
+        }}
+      >
         <TYDCLogo size={150} />
         <div className="form-title">Sign Up</div>
         <div className="input-wrapper">

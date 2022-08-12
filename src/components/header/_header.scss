@@ -2,7 +2,7 @@
 .header-wrapper {
   max-width: 100%;
   background: $header-color;
-  box-shadow: 2px 4px 4px 1px gray;
+  box-shadow: $main-shadow;
   display: flex;
   align-items: center;
   justify-content: space-between;

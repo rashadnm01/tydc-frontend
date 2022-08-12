@@ -33,18 +33,12 @@
 
   .leave-feedback-body {
     box-shadow: $main-shadow;
-    color: white;
+    color: black;
     height: 100%;
     width: 100%;
     border-bottom-left-radius: $main-radius;
     border-bottom-right-radius: $main-radius;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      radial-gradient(
-        54.45% 77.04% at 60.25% 22.96%,
-        #8f8f8f 0%,
-        rgba(143, 143, 143, 0) 90.62%,
-        rgba(143, 143, 143, 0) 100%
-      );
+    background: white;
     form[type="submit"] {
       display: flex;
       flex-direction: column;

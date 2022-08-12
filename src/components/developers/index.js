@@ -6,7 +6,9 @@ export const Developers = (props) => {
   const [developers, setDevelopers] = useState(null);
   useEffect(() => {
     setDevelopers(
-      props.developers.map((developer) => <Developer dev={developer} />)
+      props.developers
+        .filter((users) => users.display)
+        .map((developer) => <Developer dev={developer} />)
     );
   }, [props.developers]);
   return <div className="developers-wrapper">{developers}</div>;

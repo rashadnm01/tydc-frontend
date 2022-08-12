@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Developers } from "../../developers";
 import { useNavigate } from "react-router-dom";
 import { getUsers } from "./helpers";
+import Spinner from "react-bootstrap/Spinner";
+
 import "./_dev-list.scss";
 export const DevList = (props) => {
   const type = props.type;
@@ -26,7 +28,7 @@ export const DevList = (props) => {
         {users ? (
           <Developers developers={users} />
         ) : (
-          <div>Loading developers...</div>
+          <Spinner animation="border" variant="info" />
         )}
       </div>
     </div>

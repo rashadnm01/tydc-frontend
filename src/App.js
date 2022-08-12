@@ -12,21 +12,37 @@ import { HirePage } from "./components/hire-page";
 import { AboutPage } from "./components/about-page";
 import { FeedbackPage } from "./components/feedback-page";
 import { SignupFlow } from "./components/signup/signup-flow";
+import { getCookie, setCookie } from "./assets/cookie-manual";
+import React, { useState, useEffect } from "react";
+import { ProfilePage } from "./components/profile-page";
 function App() {
   var deviceWidth = window.innerWidth || 1000;
   var deviceHeight = window.innerHeight || 1000;
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setLoggedIn(getCookie("logged_in"));
+  }, []);
   return (
     <Container>
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<HomeBody />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/signup-verification" element={<SignupFlow />} />
-          <Route path="/hire" element={<HirePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/feedback" element={<FeedbackPage />} />
+          <Route path="/" element={<HomeBody loggedIn={loggedIn} />} />
+          <Route path="/login" element={<Login loggedIn={loggedIn} />} />
+          <Route path="/signup" element={<Signup loggedIn={loggedIn} />} />
+          <Route
+            path="/signup-verification"
+            element={<SignupFlow loggedIn={loggedIn} />}
+          />
+          <Route path="/hire" element={<HirePage loggedIn={loggedIn} />} />
+          <Route path="/about" element={<AboutPage loggedIn={loggedIn} />} />
+          <Route
+            path="/feedback"
+            element={<FeedbackPage loggedIn={loggedIn} />}
+          />
+          <Route path="/profile" element={<ProfilePage loggedIn />} />
         </Routes>
       </div>
     </Container>

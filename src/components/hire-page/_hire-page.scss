@@ -1,27 +1,10 @@
 .hire-page-wrapper {
   padding: 4rem;
-  height: 100vh;
+  height: 90vh;
   overflow: clip;
   display: flex;
   justify-content: space-around;
   div {
     position: relative;
   }
-}
-.hire-page-wrapper::before {
-  content: "";
-  background-image: url("../../assets/bckgrnd1.jpg");
-  height: 100vh;
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: absolute;
-  top: 20vh;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.3;
 }

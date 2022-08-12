@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { getCookie, setCookie } from "../../assets/cookie-manual";
 export const signup = (
   e,
   username,
@@ -30,6 +31,10 @@ export const signup = (
       console.log("Success:", data);
       if (data.signedUp) {
         setSignedUp(data.signedUp);
+        setCookie("logged_in", true, 1);
+        setCookie("username", username, 1);
+        setCookie("last_login", Date.now(), 30);
+        setCookie("user_id", data.userId, 1);
       } else {
         setFailure(true);
       }

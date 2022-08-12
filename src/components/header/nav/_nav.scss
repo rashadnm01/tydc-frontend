@@ -2,6 +2,7 @@
 .nav {
   display: flex;
   font-family: $cool-font;
+
   @media screen and (max-width: 800px) {
     width: 100%;
     flex-wrap: wrap;

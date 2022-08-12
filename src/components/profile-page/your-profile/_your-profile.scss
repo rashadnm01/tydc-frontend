@@ -1,0 +1,70 @@
+@import "../../../assets/global-styles.scss";
+
+.your-profile-wrapper {
+  width: 80%;
+  height: 80%;
+  .your-profile-title {
+    border-top-left-radius: $main-radius;
+    border-top-right-radius: $main-radius;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    color: white;
+    width: 100%;
+    height: 3rem;
+    background: $header-color;
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .your-profile-body {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    background: $body-color;
+    height: 100%;
+    width: 100%;
+    .profile-tiles {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgb(2, 3, 3);
+      .skills-tile {
+        overflow-x: scroll;
+      }
+      .profile-tile {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        background: $header-color;
+        border: 1px solid white;
+        padding: 0.5rem 0;
+        font-weight: 700;
+        border-radius: 8px;
+        margin: 0.2rem 0;
+      }
+      .profile-comp-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0.3rem 0;
+      }
+    }
+  }
+}
+.updating {
+  border: 1px solid black;
+  border-radius: 1000px;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  background: white;
+}

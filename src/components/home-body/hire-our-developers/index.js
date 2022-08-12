@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Developers } from "../../developers";
 import { useNavigate } from "react-router-dom";
 import "./_hire-our-developers.scss";
+import Spinner from "react-bootstrap/Spinner";
+
 import { getUsers } from "../../hire-page/devlist/helpers";
 export const HireOurDevelopers = (props) => {
   const type = props.type;
@@ -23,7 +25,7 @@ export const HireOurDevelopers = (props) => {
         {users ? (
           <Developers developers={users} />
         ) : (
-          <div>Loading developers...</div>
+          <Spinner animation="border" variant="info" />
         )}
       </div>
     </div>

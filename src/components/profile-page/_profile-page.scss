@@ -1,0 +1,19 @@
+@import "../../assets/global-styles.scss";
+.profile-page-wrapper {
+  height: 80vh;
+  width: 100%;
+  padding: 0.2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.9px solid black;
+  color: white;
+  border-radius: $main-radius;
+  box-shadow: $main-shadow;
+  overflow: hidden;
+  .profile-page-title {
+  }
+  .profile-page-body {
+  }
+}
