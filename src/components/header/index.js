@@ -7,6 +7,7 @@ import { getCookies } from "../../assets/cookie-manual";
 import { ViewProfile } from "./view-profile";
 import { useNavigate } from "react-router-dom";
 import { getCookie } from "../../assets/cookie-manual";
+import { signOut } from "../profile-page/your-profile/helpers";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -20,6 +21,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { isFocusable } from "@testing-library/user-event/dist/utils";
 
 const pages = ["Hire Our Developers", "About Us", "Leave Us Feedback"];
 const settings = ["Profile", "Signout"];
@@ -60,20 +62,31 @@ export const Header = (props) => {
   };
 
   const handleCloseUserMenu = (event) => {
-    if (event.target.text === "Profile") {
+    const text = event.target.innerText;
+    if (text.includes("Profile")) {
       if (Boolean(getCookie("logged_in"))) {
         navigate("/profile");
       } else {
         navigate("/login");
       }
-    } else if (event.target.text === "Login") {
+    } else if (text === "Login") {
       navigate("/login");
+    } else if (text == "Sign out") {
+      signOut();
+      navigate("/login");
+    } else if (text == "Sign up") {
+      navigate("/signup");
     }
     setAnchorElUser(null);
   };
   useEffect(() => {
     setLoggedIn(Boolean(getCookie("logged_in")));
-    settings[1] = loggedIn ? "Login" : "Signout";
+    if (!loggedIn) {
+      settings[1] = "Login";
+      settings[2] = "Sign up";
+    } else {
+      settings[1] = "Sign out";
+    }
   }, [loggedIn]);
   return (
     <AppBar
