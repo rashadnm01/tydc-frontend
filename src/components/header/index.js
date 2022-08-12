@@ -3,9 +3,10 @@ import "./_header.scss";
 import { TYDCLogo } from "../../assets/tydc-logo";
 import { Nav } from "./nav";
 import { LoginSignupText } from "./login-signup-text";
-import { getCookie } from "../../assets/cookie-manual";
+import { getCookies } from "../../assets/cookie-manual";
 import { ViewProfile } from "./view-profile";
 import { useNavigate } from "react-router-dom";
+import { getCookie } from "../../assets/cookie-manual";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -43,6 +44,7 @@ export const Header = (props) => {
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
+    console.log(anchorElUser);
   };
 
   const handleCloseNavMenu = (event) => {
@@ -58,6 +60,15 @@ export const Header = (props) => {
   };
 
   const handleCloseUserMenu = (event) => {
+    if (event.target.text === "Profile") {
+      if (Boolean(getCookie("logged_in"))) {
+        navigate("/profile");
+      } else {
+        navigate("/login");
+      }
+    } else if (event.target.text === "Login") {
+      navigate("/login");
+    }
     setAnchorElUser(null);
   };
   useEffect(() => {
