@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# The Young Developer Commmittee Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The purpose of TYDC is to help talented junior software developers get their first jobs in tech. We know how hard it is to make that breakthrough, and TYDC will be dedicated to helping land interviews with recruiters and companies who are interested in your skills.
 
 ## Available Scripts
 
